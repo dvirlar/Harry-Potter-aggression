@@ -42,3 +42,4 @@ hp_graph
 ```
 
 
+My favorite hangman words are: gingerbread, lynx, vortex, and omit
