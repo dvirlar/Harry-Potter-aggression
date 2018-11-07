@@ -22,3 +22,23 @@ hp_data <- read_csv("harry_potter_aggression_full.csv")
 
 I'm in lab week 6, woo!
 
+
+2. Basic Wrangling and make a graph of Harry and Draco's aggression rates
+```{r}
+
+hp_graph <- hp_data %>% 
+  filter(Name == "Harry" | Name == "Draco Malfoy") %>% 
+  select(Name, book, agg.per.mention ) %>% 
+  
+  #create a clustered column graph
+  ggplot(aes(x = book, y = agg.per.mention)) +
+  geom_col(aes(fill = Name), position = "dodge") +
+  coord_flip() +
+  theme_bw()
+
+
+hp_graph
+
+```
+
+
